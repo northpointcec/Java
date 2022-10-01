@@ -1,6 +1,9 @@
 package arrayList;
 
 import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.Iterator;
+import java.util.Vector;
 
 public class Arraylist1 {
 
@@ -18,5 +21,13 @@ public class Arraylist1 {
         l.add(l1);
         l.add(l2);
         System.out.println(l);
+        Iterator<ArrayList<Integer>> it = l.iterator();
+        while(it.hasNext()) {
+            System.out.println(it.next());
+        }
+       Enumeration<ArrayList<Integer>> en = new Vector<ArrayList<Integer>>(l).elements();
+       while(en.hasMoreElements()) {
+           System.out.println(en.nextElement());
+       }
     }
 }
