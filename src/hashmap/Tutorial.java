@@ -2,9 +2,6 @@ package hashmap;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import hashSet.Set;
-
 public class Tutorial {
   //Tutorial of HashMap in java
     public static void main(String[] args) {
