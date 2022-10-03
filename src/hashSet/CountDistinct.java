@@ -14,7 +14,7 @@ public class CountDistinct {
         for( int i = 0; i<arr.length;i++) {
             h.add(arr[i]);
         }
-        System.out.println(h);
+      
         return h.size();
        
        }
