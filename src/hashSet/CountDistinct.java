@@ -6,7 +6,7 @@ public class CountDistinct {
 
     public static void main(String[] args) {
       
-        int[] arr  = {1,4,7,8,5,2,3,6,9,8,7,4,5,8,4,2,5,6,2,4,5,6,6};
+        int[] arr  = {1,1,2,2,3,3,4,5,6,7};
         System.out.println(count(arr));
     }
     static int count(int[] arr) {
