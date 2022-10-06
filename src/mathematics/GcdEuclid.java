@@ -2,7 +2,7 @@ package mathematics;
 
 import java.util.Scanner;
 
-public class GceEuclid {
+public class GcdEuclid {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
