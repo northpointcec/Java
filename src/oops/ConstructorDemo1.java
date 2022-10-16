@@ -14,5 +14,8 @@ public class ConstructorDemo1 {
        ConstructorDemo1  a = new ConstructorDemo1("Ajay");
        System.out.println(a);
        System.out.println(a.toString());
+      
     }
+
+   
 }
