@@ -29,5 +29,5 @@ public class Arraylist1 {
        while(en.hasMoreElements()) {
            System.out.println(en.nextElement());
        }
-    }
+          }
 }
