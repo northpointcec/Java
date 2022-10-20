@@ -12,7 +12,7 @@ public class Demo {
         n3.next = null;
         traverse(head);
     }
-    static void traverse(Node curr) {
+   public static void traverse(Node curr) {
         while(curr!=null) {
             System.out.println(curr.data);
             curr = curr.next;
