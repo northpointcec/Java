@@ -9,6 +9,7 @@ public class Factorial {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         System.out.println(fact(n));
+        sc.close();
     }
     static BigInteger fact( int n) {
         BigInteger f = new BigInteger("1");
