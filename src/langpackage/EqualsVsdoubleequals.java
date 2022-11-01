@@ -13,6 +13,8 @@ public class EqualsVsdoubleequals {
         StringBuffer sb1 = new StringBuffer("Ajay");
         StringBuffer sb2 = new StringBuffer("Ajay");
         System.out.println(sb1==sb2);
+        // in this case Object class equals method is called
+        // which is meant for address or reference comparison
         System.out.println(sb1.equals(sb2));
     }
 }
