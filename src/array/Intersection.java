@@ -13,13 +13,13 @@ public class Intersection {
                 i++;
                continue;
             }
-            if(a[i]>b[j]) {
+             if(a[i]>b[j]) {
                 j++;
             }
-            if(a[i]<b[j]) {
+            else if(a[i]<b[j]) {
                 i++;
             }
-            if(a[i] == b[j]) {
+            else if(a[i] == b[j]) {
                 System.out.print(a[i]+ " ");
                 i++;
                 j++;
