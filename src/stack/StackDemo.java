@@ -10,6 +10,7 @@ public class StackDemo {
         s.push(40);
         s.push(50);
         s.push(0);
+        System.out.println(s.size());
         System.out.println(s.isEmpty());
         s.pop();
         s.pop();
@@ -48,7 +49,7 @@ class MyStack{
         return arr[top];
     }
     int size() {
-        return cap;
+        return top+1;
     }
     boolean isEmpty() {
         return (top == -1);
