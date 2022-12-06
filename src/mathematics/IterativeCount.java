@@ -9,6 +9,7 @@ public class IterativeCount {
         int n = sc.nextInt();
         int m = sc.nextInt();
         int res = 1;
+        sc.close();
         while(m>0) {
             if((m&1) == 1) {
                 res = res*n;
