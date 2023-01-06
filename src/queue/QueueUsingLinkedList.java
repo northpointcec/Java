@@ -3,7 +3,7 @@ package queue;
 public class QueueUsingLinkedList {
 
     public static void main(String[] args) {
-        Queue q = new Queue();
+        Queued q = new Queued();
         q.enqueue(10);
         q.enqueue(20);
         q.enqueue(30);
@@ -23,10 +23,10 @@ public class QueueUsingLinkedList {
     }
 }
 
-class Queue{
+class Queued{
     Node front ;
     Node rear;
-    Queue(){
+    Queued(){
         front = rear = null;
     }
     void enqueue(int data) {
