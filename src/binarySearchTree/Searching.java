@@ -12,6 +12,7 @@ public class Searching {
         root.right.left = new Node(35);
         root.right.right = new Node(50);
         System.out.println(search(root, 30));
+        traverse(root);
     }
     static boolean search(Node root, int data) {
         if(root == null) {
@@ -22,6 +23,13 @@ public class Searching {
         }
         return (root.data > data)?search(root.left, data):search(root.right, data);
      }
+    static void traverse(Node root) {
+        if(root != null) {
+            traverse(root.left);
+            System.out.print(root.data + " ");
+            traverse(root.right);
+        }
+    }
     }
    
 class Node {
