@@ -1,15 +1,17 @@
 package graph;
 
 import java.util.ArrayList;
-import java.util.Stack;
+import java.util.LinkedList;
+import java.util.Queue;
 
-public class DfsTraversal {
+public class ShortestPathUnweighted {
 	public static void main(String[] args) {
 		ArrayList<ArrayList<Integer>> arr = new ArrayList<>();
 		for (int i = 0; i < 5; i++) {
 			arr.add(new ArrayList<>());
 			arr.get(i).add(i);
 		}
+		System.out.println(arr.get(0));
 		addEdge(arr, 0, 1);
 		addEdge(arr, 0, 4);
 		addEdge(arr, 1, 2);
@@ -17,25 +19,30 @@ public class DfsTraversal {
 		addEdge(arr, 1, 4);
 		addEdge(arr, 2, 3);
 		addEdge(arr, 3, 4);
-		dfsTraversal(arr, 0);
+		int[] dist = shortestdistance(arr, 1);
+		for (int i : dist) {
+			System.out.print(i + " ");
+		}
 	}
 
-	public static void dfsTraversal(ArrayList<ArrayList<Integer>> adj, int src) {
-		Stack<Integer> stack = new Stack<>();
+	public static int[] shortestdistance(ArrayList<ArrayList<Integer>> adj, int src) {
 		boolean[] visited = new boolean[adj.size()];
+		int[] dist = new int[adj.size()];
+		Queue<Integer> queue = new LinkedList<>();
+		dist[src] = 0;
 		visited[src] = true;
-		stack.push(src);
-		while (!stack.isEmpty()) {
-			int u = stack.pop();
-			System.out.print(u + " ");
+		queue.add(src);
+		while (!queue.isEmpty()) {
+			int u = queue.poll();
 			for (int v : adj.get(u)) {
 				if (!visited[v]) {
+					dist[v] = dist[u] + 1;
 					visited[v] = true;
-					stack.push(v);
-
+					queue.add(v);
 				}
 			}
 		}
+		return dist;
 	}
 
 	public static void addEdge(ArrayList<ArrayList<Integer>> adj, int u, int v) {
