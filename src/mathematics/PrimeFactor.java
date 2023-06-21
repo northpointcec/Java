@@ -14,7 +14,7 @@ public class PrimeFactor {
      int c = 2;
      while(n>1) {
          if(n%c==0) {
-             System.out.println(c);
+             System.out.print(c + " ");
              n = n/c;
          }else {
              c++;
